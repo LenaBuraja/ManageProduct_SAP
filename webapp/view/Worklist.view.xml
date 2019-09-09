@@ -57,6 +57,13 @@
 					<Column id="nameColumn">
 						<Text text="{i18n>tableNameColumnTitle}" id="nameColumnTitle"/>
 					</Column>
+					<Column
+						id="supplierNameColumn"
+						demandPopin="true"
+						minScreenWidth="Tablet"
+					>
+						<Text text="{i18n>tableSupplierColumnTitle}"/>
+					</Column>
 					<Column id="unitNumberColumn" hAlign="End">
 						<Text text="{i18n>tableUnitNumberColumnTitle}" id="unitNumberColumnTitle"/>
 					</Column>
@@ -71,6 +78,7 @@
 								title="{ProductID}"
 								text="{Name}"	
 							/>
+							<Text text="{SupplierName}"/>
 							<ObjectNumber
 								number="{
 									path: 'Price',
