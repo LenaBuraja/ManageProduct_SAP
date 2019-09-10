@@ -25,6 +25,9 @@
 					sorter: {
 						path: 'ProductID',
 						descending: false
+					},
+					parameters: {
+						expand: 'ToSupplier'
 					}
 				}"
 				noDataText="{worklistView>/tableNoDataText}"
@@ -64,6 +67,12 @@
 					>
 						<Text text="{i18n>tableSupplierColumnTitle}"/>
 					</Column>
+					<Column id="webAddressColumn"
+						demandPopin="false"
+						minScreenWidth="Tablet"
+					>
+						<Text text="{i18n>tableSupplierWebAddressColumnTitle}"/>
+					</Column>
 					<Column id="unitNumberColumn" hAlign="End">
 						<Text text="{i18n>tableUnitNumberColumnTitle}" id="unitNumberColumnTitle"/>
 					</Column>
@@ -79,6 +88,11 @@
 								text="{Name}"	
 							/>
 							<Text text="{SupplierName}"/>
+							<Link
+								text="{ToSupplier/WebAddress}"
+								href="{ToSupplier/WebAddress}"
+								target="_blank"
+							/>
 							<ObjectNumber
 								number="{
 									path: 'Price',
