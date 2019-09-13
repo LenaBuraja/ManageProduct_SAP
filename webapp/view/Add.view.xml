@@ -50,5 +50,17 @@
 				</smartform:Group>
 			</smartform:SmartForm>
 		</semantic:content>
+		<semantic:saveAction>
+			<semantic:SaveAction
+				id="save"
+				press="onSave"
+			/>
+		</semantic:saveAction>
+		<semantic:cancelAction>
+			<semantic:CancelAction
+				id="cancel"
+				press="onCancel"
+			/>
+		</semantic:cancelAction>
 	</semantic:FullscreenPage>
 </mvc:View>
