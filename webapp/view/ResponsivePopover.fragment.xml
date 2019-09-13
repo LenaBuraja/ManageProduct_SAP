@@ -13,25 +13,25 @@
 					<Text
 						text="{i18n>productWidth}: {
 							path: 'Width',
-							formatter: '../model/formatter.numberUnit'
+							formatter: '.formatter.numberUnit'
 						} {DimUnit}"
 					/>
 					<Text
 						text="{i18n>productDepth}: {
 							path: 'Depth',
-							formatter: '../model/formatter.numberUnit'
+							formatter: '.formatter.numberUnit'
 						} {DimUnit}"
 					/>
 					<Text
 						text="{i18n>productHeight}: {
 							path: 'Height',
-							formatter: '../model/formatter.numberUnit'
+							formatter: '.formatter.numberUnit'
 						} {DimUnit}"
 					/>
 					<Text
 						text="{i18n>productWeight}: {
 							path: 'WeightMeasure',
-							formatter: '../model/formatter.numberUnit'
+							formatter: '.formatter.numberUnit'
 						} {WeightUnit}"
 					/>
 				</l:content>
