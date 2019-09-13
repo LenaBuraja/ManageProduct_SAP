@@ -31,6 +31,28 @@ sap.ui.define(
 				
 				//here goes your logic which will be executed when the "add" route is hit
 				//will be done within the next unit
+				// register for metadata loaded events
+				var oModel = this.getModel();
+				oModel.metadataLoaded().then(this._onMetadataLoaded.bind(this));
+			},
+			_onMetadataLoaded: function () {
+					
+				// create default properties
+				var oProperties = {
+					ProductID: "" + parseInt(Math.random() * 1000000000, 10),
+					TypeCode: "PR",
+					TaxTarifCode: 1,
+					CurrencyCode: "EUR",
+					MeasureUnit: "EA"
+				};
+					
+				// create new entry in the model
+				this._oContext = this.getModel().createEntry("/ProductSet", {
+					properties: oProperties
+				});
+				
+				// bind the view to the new entry
+				this.getView().setBindingContext(this._oContext);
 				
 			},
 			
