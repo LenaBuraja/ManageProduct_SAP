@@ -1,5 +1,5 @@
 <mvc:View
-	controllerName="opensap.manageproducts.controller.Add"
+	controllerName="opensap.managepropducts.ManageProducts.controller.Add"
 	xmlns:mvc="sap.ui.core.mvc"
 	xmlns:semantic="sap.m.semantic"
 	xmlns="sap.m"

@@ -136,7 +136,8 @@
 				"add": {
 					"viewName": "Add",
 					"viewId": "add",
-					"viewLevel": 3
+					"viewLevel": 3,
+					"title": "{i18n>addPageTitle}"
 				},
 				"objectNotFound": {
 					"viewName": "ObjectNotFound",
