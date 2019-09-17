@@ -1,8 +1,9 @@
 sap.ui.define([
 	"./BaseController",
 	"sap/ui/model/json/JSONModel",
-	"../model/formatter"
-], function (BaseController, JSONModel, formatter) {
+	"../model/formatter",
+	"sap/m/MessageToast"
+], function (BaseController, JSONModel, formatter, MessageToast ) {
 	"use strict";
 
 	return BaseController.extend("opensap.managepropducts.ManageProducts.controller.Object", {
@@ -42,6 +43,12 @@ sap.ui.define([
 		/* =========================================================== */
 		/* event handlers                                              */
 		/* =========================================================== */
+		
+		onRatingChanged: function(oEvent) {
+			var iValue = oEvent.getParameter("value"),
+				sMessage = this.getResourceBundle().getText("productRatingSuccess", [iValue]);
+			MessageToast.show(sMessage);
+		},
 
 		/**
 		 * Event handler when the share in JAM button has been clicked

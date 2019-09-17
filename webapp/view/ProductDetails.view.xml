@@ -1,8 +1,9 @@
 <mvc:View
-	controllerName="opensap.managepropducts.ManageProducts.controller.ProductDetails"
+	controllerName="opensap.managepropducts.ManageProducts.controller.Object"
 	xmlns="sap.m"
 	xmlns:mvc="sap.ui.core.mvc"
 	xmlns:form="sap.ui.layout.form"
+	 xmlns:course="opensap.managepropducts.ManageProducts.control"
 >
 	<Panel
 		class="sapUiResponsiveMargin"
@@ -12,6 +13,7 @@
 		expanded="true"
 	>
 		<content>
+			<course:ProductRate valueSubmit="onRatingChanged"/>
 			<form:SimpleForm id="objectForm">
 				<form:content>
 					<Label id="categoryLabel" text="{i18n>productCategoryLabel}"/>
