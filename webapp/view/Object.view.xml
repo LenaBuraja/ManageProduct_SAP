@@ -37,6 +37,17 @@
 				<attributes> 
 					<ObjectAttribute text="{Name}"/>
 				</attributes>
+				<statuses>
+					<ObjectStatus
+						text="{
+							parts: [
+								{path: 'WeightUnit'},
+								{path: 'WeightMeasure'}
+							],
+							formatter : '.formatter.delivery'
+						}"
+					/>
+				</statuses>
 			</ObjectHeader>
 			<mvc:XMLView viewName="opensap.managepropducts.ManageProducts.view.ProductDetails"/>
 			<core:Fragment
